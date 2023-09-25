@@ -1,0 +1,120 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #666666;
+}
+
+/* DEBUT DE HEADER */
+.orange{
+    background-color: #F56A25;
+}
+
+.time{
+    position: relative;
+    left: 15px;
+    top: 5px;
+    color: #fafafa;
+    background-color: rgb(34, 194, 34);
+    padding: 5px;
+    border-radius: 15px;
+    border-style: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.header{
+    padding-top: 30px;
+}
+
+h3{
+    margin: 0 auto;
+    color: #fafafa;
+    font-weight: 500;
+}
+
+#ellipsis{
+    color: #fafafa;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin: 0 10px 10px 0;
+}
+/* FIN DE HEADER */
+
+/* MAIN */
+main{
+    margin-top: 2vh;
+}
+
+.svg{
+    margin: 10px 10px 0 20px;
+}
+
+.container{
+    flex-direction: column;
+}
+
+.text{
+    width: 45%;
+}
+
+.newdiv{
+    gap: 20px;
+}
+
+.prix{
+    text-align: center;
+    line-height: 30px;
+    background-color: #66666650;
+    border-radius: 30px;
+    width: 60px;
+    margin: 15px 0 0 15px;
+}
+
+.description{
+    font-size: 12px;
+    color: #666666;
+    margin: 1vh 0 0 0;
+    max-width: 50vw;
+}
+
+.panier{
+    display: none;
+}
+
+/* 
+.compteur{
+    position: absolute;
+    right: 30px;
+    margin-top: 20px;
+} */
+.moinsUn, .plusUn{
+    border-radius: 50%;
+    width: 20px;
+    margin: auto;
+}
+.totCompteur{
+    margin: 0 20px;
+}
+
+hr{
+    margin: 15px 0;
+}
+/* FOOTER */
+.center{
+    text-align: center;
+}
+
+.footer{
+    justify-content: space-evenly;
+    padding-bottom: 35px;
+}
