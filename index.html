@@ -8,6 +8,7 @@
     <script src="ticket.js" defer></script>
     <script src="compteur.js" defer></script>
     <script src="datetime.js" defer></script>
+    <script src="paiement.js" defer></script>
   </head>
   <body>
     <header class="orange">
@@ -15,20 +16,48 @@
         <span class="heure"></span>:<span class="minute"></span>
       </button>
       <div class="flex header">
-        <h3>Acheter</h3>
+        <h3 class="onglet">Acheter</h3>
         <p id="ellipsis">...</p>
       </div>
     </header>
 
     <main>
-      <div class="container flex"></div>
+      <div class="showAcheter">
+        <div class="container flex"></div>
 
-      <div class="panier">
-        <p>Total:<span class="montant"> </span></p>
-        <button class="acheter">Acheter<span class="quantite"></span></button>
+        <div class="panier">
+          <p class="prixTotal">Total: <span class="montant"> </span></p>
+          <!-- EVENEMENT ONCLICK + function -->
+          <button onclick="paiement()" class="acheter">Acheter<span class="quantite"></span></button>
+          <hr />
+        </div>
       </div>
+
+      <div class="showPaiement">
+        <h2 class="totCommande"><strong>Total de la commande: <span class="montant"></span></strong></h2>
+        <hr>
+        <div class="facturation"></div>
+        <div class="flex checkbox">
+            <input type="checkbox" onclick="check()" name="conditions" id="conditions">
+            <p>J'ai lu et j'accepte les <a href="" class="cgdv">conditions générales de vente</a></p>
+        </div>
+
+        <p class="warning">Attention vos correspondances ainsi que vos titres ne vous permettent pas d'utiliser
+            le métro pour le moment
+        </p>
+
+        <button disabled onclick="paiementCB()" class="linkConditions ">Payer</button>
+
+        <div class="showCB">
+
+        </div>
+
+        
+      </div>
+
     </main>
 
+    <!-- CREER PAGE PAIEMENT DISPLAY NONE  -->
 
     <!-- DEBUT DU FOOTER -->
     <footer>

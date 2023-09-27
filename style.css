@@ -87,9 +87,35 @@ main{
     max-width: 50vw;
 }
 
+/* PANIER */
 .panier{
     display: none;
+    box-shadow: 0px -11px 32px -8px rgba(0, 0, 0, 0.507);
+    /* box-shadow:
+    0 -20px  40px rgba(0, 0, 0, 0.377); */
 }
+
+.prixTotal{
+    text-align: end;
+    padding: 20px 30px;
+}
+
+.acheter{
+    background-color: rgba(39, 39, 39, 0.658);
+    color: #fafafa;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    padding: 11px;
+    border: none;
+    border-radius: 10px;
+}
+
+.montant{
+    font-weight: 800;
+    color: rgb(63, 63, 63);
+}
+/* FIN DU PANIER */
 
 /* 
 .compteur{
@@ -99,8 +125,12 @@ main{
 } */
 .moinsUn, .plusUn{
     border-radius: 50%;
-    width: 20px;
+    width: 22px;
     margin: auto;
+    color: white;
+    background-color: #313131d6;
+    border: none;
+    height: 22px;
 }
 .totCompteur{
     margin: 0 20px;
@@ -108,7 +138,61 @@ main{
 
 hr{
     margin: 15px 0;
+    color: #66666628;
+    width: 95vw;
+    margin: 20px auto;
+    text-align: center;
 }
+
+ .showPaiement{
+     display: none; 
+    text-align: center;
+ }
+
+/* A ENLEVER */
+/* PAGE 1 ACHETER */
+/* .showAcheter{
+    display: none;
+} */
+
+.showCB{
+    display: none;
+}
+
+
+.linkConditions{
+    width: 80%;
+    padding: 15px;
+    margin: 40px auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #6e6e6e;
+    color: #fafafa;
+    font-weight: 600;
+}
+
+.totCommande{
+    margin: 50px 0 0 20px;
+}
+
+.checkbox{
+    margin: 20px;
+    gap: 20px;
+    font-size: small;
+}
+
+.cgdv{
+    text-decoration: underline;
+    color: rgb(75, 75, 235);
+}
+
+.warning{
+    color: red;
+    width: 80%;
+    margin: 50px auto 80px;
+}
+
+
 /* FOOTER */
 .center{
     text-align: center;

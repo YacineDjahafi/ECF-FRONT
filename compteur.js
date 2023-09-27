@@ -1,6 +1,6 @@
 // Compteur et bouton
 let count = 0;
-
+// FONCTION POUR AJOUTER UN (BOUTON)
 function addOne(id) {
     let counter = document.querySelector("#compteur" + id);
     counter.innerText++;
@@ -8,6 +8,7 @@ function addOne(id) {
     update();
 }
 // METTRE CONDITION < 0
+// FONCTION POUR SOUSTRAIRE DE UN (BOUTON)
 function minusOne(id) {
     let counter = document.querySelector("#compteur" + id);
     if (counter.innerText > 0) {
@@ -38,8 +39,9 @@ function update() {
         quantite.push([number.innerText, i])
         i++
     });
-    // console.log(quantite);
 
+
+   
 
     // TOTAL (croisement des deux tableaux)
     let j = 0;
@@ -52,13 +54,19 @@ function update() {
             // On compare les deux id
             // number[1] car l'id est le deuxième champ
             if (ticket.id === number[1]) {
-                prixTotal += ticket.prix / 100 * number[0];
+                prixTotal += ticket.prix / 100 * parseInt(number[0], 10);
                 // ARRONDIR LE TOTAL A 1 virgule
                 j++
             }
         });
+        quantiteTotal += parseInt(number[0], 10);
     });
-    console.log(prixTotal)
+
+  
+    // console.log(prixTotal)
+    // console.log(quantiteTotal);
+
+
 
     let panier = document.querySelector(".panier")
     if (prixTotal > 0) {
@@ -71,8 +79,8 @@ function update() {
     let montant = document.querySelector(".montant")
     montant.innerText = prixTotal + " €"
 
-    let panierQuantite = document.querySelector("quantite")
-    // panierQuantite.innerText = 
+    let panierQuantite = document.querySelector(".quantite")
+    panierQuantite.innerText = "(" + quantiteTotal + ")"
 }
 
 
