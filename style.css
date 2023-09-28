@@ -71,6 +71,17 @@ main{
     gap: 20px;
 }
 
+.montantPaiement{
+    float: right;
+    margin-right: 15px;
+}
+.nomTicket{
+    flex: 4;
+    text-align: left;
+}
+.prixTicket{
+    flex: 1;
+}
 .prix{
     text-align: center;
     line-height: 30px;
@@ -91,8 +102,6 @@ main{
 .panier{
     display: none;
     box-shadow: 0px -11px 32px -8px rgba(0, 0, 0, 0.507);
-    /* box-shadow:
-    0 -20px  40px rgba(0, 0, 0, 0.377); */
 }
 
 .prixTotal{
@@ -144,6 +153,7 @@ hr{
     text-align: center;
 }
 
+/* PAGE 2 TOTAL + CONDITIONS */
  .showPaiement{
      display: none; 
     text-align: center;
@@ -151,10 +161,11 @@ hr{
 
 /* A ENLEVER */
 /* PAGE 1 ACHETER */
-/* .showAcheter{
-    display: none;
-} */
+.showAcheter{
+    /* display: none; */
+}
 
+/* PAGE 3 CB PAIEMENT */
 .showCB{
     display: none;
 }
@@ -172,7 +183,14 @@ hr{
 }
 
 .totCommande{
-    margin: 50px 0 0 20px;
+    margin: 50px 0 0 15px;
+    text-align: left;
+    color: black;
+
+}
+
+.facturation{
+    margin: 15px;
 }
 
 .checkbox{

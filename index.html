@@ -34,7 +34,7 @@
       </div>
 
       <div class="showPaiement">
-        <h2 class="totCommande"><strong>Total de la commande: <span class="montant"></span></strong></h2>
+        <h3 class="totCommande"><strong>Total de la commande: <span class="montantPaiement"></span></strong></h3>
         <hr>
         <div class="facturation"></div>
         <div class="flex checkbox">
@@ -47,12 +47,18 @@
         </p>
 
         <button disabled onclick="paiementCB()" class="linkConditions ">Payer</button>
+      </div>
 
-        <div class="showCB">
-
+      
+      <div class="showCB">
+        <a href=""></a>
+        <p>Montant: <span class="montantCB"></span></p>
+        <div>
+          <!-- METTRE REGEX -->
+          <input type="text" name="mois" placeholder="mois" id="">
+          <input type="text" name="annee" placeholder="année" id="">
+          
         </div>
-
-        
       </div>
 
     </main>
