@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le ticket - web app</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="ticket.js" defer></script>
+    <script src="compteur.js" defer></script>
+    <script src="datetime.js" defer></script>
+    <script src="paiement.js" defer></script>
+  </head>
+  <body>
+    <header class="orange">
+      <!-- Pour afficher l'heure -->
+      <!-- <button class="time">
+        <span class="heure"></span>:<span class="minute"></span>
+      </button> -->
+
+      <div class="flex header">
+        <div class="buttonPre">
+          <button onclick="" class="precedent"><</button>
+        </div>
+        <h3 class="onglet">Acheter</h3>
+        <p id="ellipsis">...</p>
+      </div>
+    </header>
+
+    <main>
+      <!-- ONGLET ACHETER -->
+      <!-- PAGE 1 LISTE TICKETS A ACHETER -->
+      <div class="showAcheter">
+        <div class="container flex"></div>
+
+        <div class="panier">
+          <p class="prixTotal">Total: <span class="montant"> </span></p>
+          <!-- EVENEMENT ONCLICK + function -->
+          <button onclick="paiement()" class="acheter">
+            Acheter <span class="quantite"></span>
+          </button>
+          <hr />
+        </div>
+      </div>
+      <!-- PAGE 2 TOTAL DE LA COMMANDE -->
+      <div class="showPaiement">
+        <h3 class="totCommande">
+          <strong
+            >Total de la commande: <span class="montantPaiement"></span
+          ></strong>
+        </h3>
+        <hr />
+        <div class="facturation"></div>
+        <div class="flex checkbox">
+          <input
+            type="checkbox"
+            onclick="check()"
+            name="conditions"
+            id="conditions"
+          />
+          <p>
+            J'ai lu et j'accepte les
+            <a href="" class="cgdv">conditions générales de vente</a>
+          </p>
+        </div>
+
+        <p class="warning">
+          Attention vos correspondances ainsi que vos titres ne vous permettent
+          pas d'utiliser le métro pour le moment
+        </p>
+
+        <button disabled onclick="paiementCB()" class="linkConditions">
+          Payer
+        </button>
+      </div>
+
+      <!-- PAGE 3 ENTRER LES DONNEES DE LA CB -->
+      <div class="showCB">
+        <a href=""></a>
+        <p class="cbMontant">Montant: <span class="montantCB"></span></p>
+        <div class="inputCB">
+          <!-- METTRE REGEX -->
+          <label class="cbnumber">Numéro de carte</label>
+          <div class="flex">
+            <input type="number" name="cbnumber" placeholder="" id="cbnumber" />
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"/></svg>
+          </div>
+          <label class="expire">Expire fin</label>
+          <div class="flex">
+            <input type="number" name="mois" placeholder="mois" id="" />
+            <input type="number" name="annee" placeholder="année" id="" />
+          </div>
+          <label class="cryptogramme">Cryptogramme visuel</label>
+          <input class="cryptogramme" type="password" name="crypto">
+          <button onclick="addTickets()" class="submit" type="submit"> VALIDER</button>
+          <div class="flex logoCB">
+            <img class="imgCB1" src="/img/visa-secure_blu_2021.png" alt="">
+            <img class="imgCB2" src="/img/logo-paiementsecurise-small.png" alt="">
+            <img class="imgCB3" src="/img/mcidcheck.png" alt="">
+          </div>
+      </div>
+      <div class="footerPaiement">
+        <p class="returnShop"><a href="/index.html">Annuler et retourner à la boutique</a></p> <hr>
+        <div class="flexfooter">
+          <img class="imgLogo" src="/img/payzen.png" alt="">
+          <img class="imgLogo" src="/img/PCIDSS.svg" alt="">
+        </div>
+        <p class="flexfooter"><span>Copyright Lyra © 2023</span><span class="legal"><a href="">Mentions légales</a></span></p>
+      </div>
+    </div>
+    <!-- PAGE MES TITRES -->
+    <div class="mesTitres">
+      <!-- Test timer -->
+      <p class="timer">
+        <!-- A VOIR SI ON GARDE CE FORMAT APRES TEST -->
+        <!-- <span class="minutes">60</span> : <span class="secondes">00</span> -->
+      </p>
+    </div>
+
+    </main>
+
+
+    <!-- DEBUT DU FOOTER -->
+    <footer>
+      <nav class="flex footer">
+        <!-- METTRE FONCTION titres() lorsqu'elle sera fini -->
+        <button onclick="addTickets()" class="center"><svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="2em"
+          viewBox="0 0 576 512"
+        >
+          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"
+          />
+          </svg>
+          <p class="navFooter">Mes titres</p>
+        </button>
+       
+        <button onclick="acheter()" class="center ongletAcheter">
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="2em"
+          viewBox="0 0 576 512"
+        >
+          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+          />
+        </svg>
+        <p class="navFooter">Acheter</p>
+        </button>
+          
+        
+        <button class="center">
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="2em"
+          viewBox="0 0 448 512"
+        >
+          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+        <p class="navFooter">Menu</p>
+        </button>
+          
+      </nav>
+    </footer>
+  </body>
+</html>

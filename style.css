@@ -1,0 +1,319 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #666666;
+}
+
+/* DEBUT DE HEADER */
+.orange{
+    background-color: #F56A25;
+}
+
+.precedent{
+    border: none;
+    background-color: #F56A25;
+    color: #ffffff;
+    font-size: 30px;
+    margin-left: 15px;
+}
+.buttonPre{
+    display: none;
+}
+
+.time{
+    position: relative;
+    left: 15px;
+    top: 5px;
+    color: #fafafa;
+    background-color: rgb(34, 194, 34);
+    padding: 5px;
+    border-radius: 15px;
+    border-style: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.header{
+    padding-top: 30px;
+}
+
+h3{
+    margin: 0 auto;
+    color: #fafafa;
+    font-weight: 500;
+}
+
+#ellipsis{
+    color: #fafafa;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin: 0 10px 10px 0;
+}
+/* FIN DE HEADER */
+
+/* MAIN */
+main{
+    margin-top: 2vh;
+}
+
+.svg{
+    margin: 10px 10px 0 20px;
+}
+
+.container{
+    flex-direction: column;
+}
+
+.text{
+    width: 45%;
+}
+
+.newdiv{
+    gap: 20px;
+}
+
+.montantPaiement{
+    float: right;
+    margin-right: 15px;
+}
+.nomTicket{
+    flex: 4;
+    text-align: left;
+}
+.prixTicket{
+    flex: 1;
+}
+.prix{
+    text-align: center;
+    line-height: 30px;
+    background-color: #66666650;
+    border-radius: 30px;
+    width: 60px;
+    margin: 15px 0 0 15px;
+}
+
+.description{
+    font-size: 12px;
+    color: #666666;
+    margin: 1vh 0 0 0;
+    max-width: 50vw;
+}
+
+/* PANIER */
+.panier{
+    display: none;
+    box-shadow: 0px -11px 32px -8px rgba(0, 0, 0, 0.507);
+}
+
+.prixTotal{
+    text-align: end;
+    padding: 20px 30px;
+}
+
+.acheter{
+    background-color: rgba(39, 39, 39, 0.658);
+    color: #fafafa;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    padding: 11px;
+    border: none;
+    border-radius: 10px;
+}
+
+.montant{
+    font-weight: 800;
+    color: rgb(63, 63, 63);
+}
+/* FIN DU PANIER */
+
+/* 
+.compteur{
+    position: absolute;
+    right: 30px;
+    margin-top: 20px;
+} */
+.moinsUn, .plusUn{
+    border-radius: 50%;
+    width: 22px;
+    margin: auto;
+    color: white;
+    background-color: #313131d6;
+    border: none;
+    height: 22px;
+}
+.totCompteur{
+    margin: 0 20px;
+}
+
+hr{
+    margin: 15px 0;
+    color: #66666628;
+    width: 95vw;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+/* A ENLEVER */
+/* PAGE 1 ACHETER */
+.showAcheter{
+    /* display: none; */
+}
+
+
+/* PAGE 2 TOTAL + CONDITIONS */
+ .showPaiement{
+     display: none; 
+    text-align: center;
+ }
+
+/* PAGE 3 CB PAIEMENT */
+.showCB{
+    display: none;
+    background-color: #d4d4d477;
+}
+
+.cbMontant{
+    text-align: center;
+    background-color: #ffffff;
+    padding: 15px;
+    
+}
+
+.inputCB{
+    padding: 5%;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+input{
+    margin: 10px;
+}
+svg{
+    margin-top: 12px;
+}
+.cryptogramme{
+    display: block;
+}
+.submit{
+    display: block;
+    margin: 40px auto;
+    padding: 10px 30%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(42, 134, 255);
+    color: #ffffff;
+    font-weight: 500
+
+}
+.logoCB{
+    width: 80%;
+    margin: 0 auto;
+    gap: 15px;
+}
+.imgCB1, .imgCB3{
+    width: 50px;
+    height: 50px;
+}
+.imgCB1, .imgCB2, .imgCB3{
+    vertical-align: middle;
+    align-items: center;
+}
+.imgCB2{
+    width: 150px;
+}
+.returnShop{
+    text-align: end;
+    background-color: #d4d4d477;
+}
+.footerPaiement{
+    
+    background-color: #d4d4d477;
+}
+.legal{
+    text-decoration: underline;
+    float: right;
+}
+.flexfooter{
+    display: flex;
+    justify-content: space-evenly;
+}
+.imgLogo{
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+.linkConditions{
+    width: 80%;
+    padding: 15px;
+    margin: 40px auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #6e6e6e;
+    color: #fafafa;
+    font-weight: 600;
+}
+
+.totCommande{
+    margin: 50px 0 0 15px;
+    text-align: left;
+    color: black;
+
+}
+
+.facturation{
+    margin: 15px;
+}
+
+.checkbox{
+    margin: 20px;
+    gap: 20px;
+    font-size: small;
+}
+
+.cgdv{
+    text-decoration: underline;
+    color: rgb(75, 75, 235);
+}
+
+.warning{
+    color: red;
+    width: 80%;
+    margin: 50px auto 80px;
+}
+
+/* MES TITRES */
+.mesTitres{
+    /* display: none; */
+}
+
+/* FOOTER */
+.center{
+    text-align: center;
+    background-color: #ffffff;
+    border: none;
+}
+.navFooter{
+    color: #666666;
+    font-size: 15px;
+}
+
+
+
+.footer{
+    justify-content: space-evenly;
+    padding-bottom: 35px;
+}
